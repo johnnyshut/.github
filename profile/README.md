@@ -42,20 +42,20 @@
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
 | [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 25 | JavaScript |
-| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 227 | TypeScript |
-| [kindlysamy/DV](https://github.com/kindlysamy/DV) | Без описания | 0 | Batchfile |
-| [sergeybyvalcev/sonar_repo](https://github.com/sergeybyvalcev/sonar_repo) | Без описания | 0 | 1C Enterprise |
-| [infostart-hub/infostart-erp-community](https://github.com/infostart-hub/infostart-erp-community) | Модульная (open source) конфигурация Infostart ERP... | 27 | 1C Enterprise |
-| [rendaf007/8_otus](https://github.com/rendaf007/8_otus) | Без описания | 0 | Batchfile |
-| [SoVa03/OtusArch](https://github.com/SoVa03/OtusArch) | Без описания | 0 | Batchfile |
-| [plotnikovstavrpl/vanessa](https://github.com/plotnikovstavrpl/vanessa) | Без описания | 0 | Batchfile |
-| [kassper31/Tree](https://github.com/kassper31/Tree) | My family tree | 0 | Batchfile |
-| [VTV-git/OTUS.](https://github.com/VTV-git/OTUS.) | Без описания | 0 | Batchfile |
-| [NastyFa/Project_NastyFa](https://github.com/NastyFa/Project_NastyFa) | Без описания | 0 | Batchfile |
-| [airat007/lesson7](https://github.com/airat007/lesson7) | Без описания | 0 | Batchfile |
-| [VladislavArkh/Project_1C](https://github.com/VladislavArkh/Project_1C) | Без описания | 0 | Batchfile |
-| [oleg-korelin/dz2](https://github.com/oleg-korelin/dz2) | Без описания | 0 | Batchfile |
-| [Abelenja/GitReposit](https://github.com/Abelenja/GitReposit) | Без описания | 0 | Batchfile |
+| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11251 | CSS |
+| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 358 | Java |
+| [LazarenkoA/prometheus_1C_exporter](https://github.com/LazarenkoA/prometheus_1C_exporter) | Мониторинг кластера 1С, отправка данных в promethe... | 172 | Go |
+| [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 50 | Java |
+| [infina15/oproxy](https://github.com/infina15/oproxy) | TCP прокси-сервер хранилища конфигураций 1С | 67 | 1C Enterprise |
+| [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
+| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 951 | 1C Enterprise |
+| [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 360 | 1C Enterprise |
+| [firstBitMarksistskaya/jenkins-lib](https://github.com/firstBitMarksistskaya/jenkins-lib) | Jenkins shared library для 1С:Предприятие 8 | 193 | Groovy |
+| [vanessa-opensource/vanessa-bootstrap](https://github.com/vanessa-opensource/vanessa-bootstrap) | Шаблон правильной разработки на 1С | 146 | Batchfile |
+| [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 238 | 1C Enterprise |
+| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 100 | 1C Enterprise |
+| [YPermitin/SQLServerTools](https://github.com/YPermitin/SQLServerTools) | Инструменты обслуживания и разработки для Microsof... | 223 | TSQL |
+| [oscript-library/gitsync](https://github.com/oscript-library/gitsync) | Синхронизация хранилища 1С с репозиторием git | 296 | 1C Enterprise |
 
 
 <!-- CONTRIBUTED_REPOS_END -->

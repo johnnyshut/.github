@@ -33,13 +33,7 @@
 
 </div>
 
-## 🫶 Поставьте 🌟🌟🌟 какому-нибудь репозиторию 🫶
-
 <!-- CONTRIBUTED_REPOS_START -->
-
-<h3 align="left">Внес вклад в проекты</h3>
-
-[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
@@ -60,6 +54,8 @@
 | [oscript-library/gitsync](https://github.com/oscript-library/gitsync) | Синхронизация хранилища 1С с репозиторием git | 296 | 1C Enterprise |
 
 <!-- CONTRIBUTED_REPOS_END -->
+
+## 🫶 Поставьте 🌟🌟🌟 какому-нибудь репозиторию 🫶
 
 <div align="left">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" alt="Footer decoration"/>

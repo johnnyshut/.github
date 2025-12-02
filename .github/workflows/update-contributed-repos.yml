@@ -252,7 +252,7 @@ jobs:
               const reposMarkdown = process.env.REPOS_MARKDOWN || '';
               const reposCount = process.env.REPOS_COUNT || '0';
               
-              const newSection = `\n\n<h3 align="left">Внес вклад в проекты</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
+              const newSection = `\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
               
               readme = before + newSection + after;
               

@@ -1,0 +1,157 @@
+name: Update Contributed Repositories
+
+on:
+  schedule:
+    # Запускается каждый день в 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Позволяет запускать вручную
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/update-contributed-repos.yml'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get contributed repositories
+        id: get-repos
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const username = 'johnnyshut';
+            const repos = new Map();
+            
+            // Получаем репозитории через поиск коммитов пользователя
+            try {
+              // Получаем события пользователя (PushEvent, PullRequestEvent и т.д.)
+              let page = 1;
+              let hasMore = true;
+              const maxPages = 3; // Ограничиваем для скорости
+              
+              while (hasMore && page <= maxPages) {
+                const events = await github.rest.activity.listPublicEventsForUser({
+                  username: username,
+                  per_page: 100,
+                  page: page
+                });
+                
+                if (events.data.length === 0) {
+                  hasMore = false;
+                  break;
+                }
+                
+                for (const event of events.data) {
+                  // Обрабатываем только PushEvent и PullRequestEvent
+                  if ((event.type === 'PushEvent' || event.type === 'PullRequestEvent') 
+                      && event.repo 
+                      && event.repo.full_name 
+                      && !event.repo.full_name.startsWith(username + '/')) {
+                    const repoName = event.repo.full_name;
+                    
+                    if (!repos.has(repoName)) {
+                      try {
+                        const [owner, repo] = repoName.split('/');
+                        const repoData = await github.rest.repos.get({
+                          owner: owner,
+                          repo: repo
+                        });
+                        
+                        repos.set(repoName, {
+                          name: repoName,
+                          description: repoData.data.description || 'Без описания',
+                          stars: repoData.data.stargazers_count,
+                          language: repoData.data.language || 'N/A',
+                          url: repoData.data.html_url,
+                          updated: repoData.data.updated_at
+                        });
+                      } catch (error) {
+                        // Пропускаем приватные или недоступные репозитории
+                        console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+                      }
+                    }
+                  }
+                }
+                
+                page++;
+                if (events.data.length < 100) hasMore = false;
+              }
+            } catch (error) {
+              console.log(`Ошибка при получении репозиториев: ${error.message}`);
+            }
+            
+            // Сортируем по дате обновления и берем топ 15
+            const sortedRepos = Array.from(repos.values())
+              .sort((a, b) => new Date(b.updated) - new Date(a.updated))
+              .slice(0, 15);
+            
+            // Формируем markdown таблицу
+            let markdown = '';
+            if (sortedRepos.length > 0) {
+              markdown = '| Репозиторий | Описание | ⭐ | Язык |\n';
+              markdown += '|-------------|----------|----|------|\n';
+              
+              for (const repo of sortedRepos) {
+                const desc = repo.description.length > 50 
+                  ? repo.description.substring(0, 50) + '...' 
+                  : repo.description;
+                // Экранируем символы для markdown
+                const safeDesc = desc.replace(/\|/g, '\\|').replace(/\n/g, ' ');
+                markdown += `| [${repo.name}](${repo.url}) | ${safeDesc} | ${repo.stars} | ${repo.language} |\n`;
+              }
+            } else {
+              markdown = '_Пока нет проектов для отображения_';
+            }
+            
+            core.setOutput('repos_markdown', markdown);
+            core.setOutput('repos_count', sortedRepos.length.toString());
+
+      - name: Update README
+        uses: actions/github-script@v7
+        env:
+          REPOS_MARKDOWN: ${{ steps.get-repos.outputs.repos_markdown }}
+          REPOS_COUNT: ${{ steps.get-repos.outputs.repos_count }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            
+            const readmePath = path.join(process.cwd(), 'profile', 'README.md');
+            let readme = fs.readFileSync(readmePath, 'utf8');
+            
+            // Находим секцию с проектами (между маркерами)
+            const startMarker = '<!-- CONTRIBUTED_REPOS_START -->';
+            const endMarker = '<!-- CONTRIBUTED_REPOS_END -->';
+            
+            const startIndex = readme.indexOf(startMarker);
+            const endIndex = readme.indexOf(endMarker);
+            
+            if (startIndex !== -1 && endIndex !== -1) {
+              const before = readme.substring(0, startIndex + startMarker.length);
+              const after = readme.substring(endIndex);
+              
+              const reposMarkdown = process.env.REPOS_MARKDOWN || '';
+              const reposCount = process.env.REPOS_COUNT || '0';
+              
+              const newSection = `\n\n<h3 align="left">📦 Проекты где я контрибьютор</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
+              
+              readme = before + newSection + after;
+              
+              fs.writeFileSync(readmePath, readme);
+            }
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add profile/README.md
+          git diff --staged --quiet || git commit -m "chore: обновить список репозиториев где я контрибьютор" || exit 0
+          git push
+

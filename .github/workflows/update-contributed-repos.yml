@@ -30,115 +30,168 @@ jobs:
             const repos = new Map();
             
             try {
-              // Метод 1: Поиск через события пользователя
-              console.log('Поиск через события пользователя...');
-              let page = 1;
-              let hasMore = true;
-              const maxPages = 10; // Увеличиваем количество страниц
+              // Используем GraphQL API для получения Pull Requests и Issues
+              // Это аналогично секции "Contributed to" на GitHub профиле
+              console.log('Поиск через Pull Requests и Issues (как в секции Contributed to)...');
               
-              while (hasMore && page <= maxPages) {
-                try {
-                  const events = await github.rest.activity.listPublicEventsForUser({
-                    username: username,
-                    per_page: 100,
-                    page: page
-                  });
-                  
-                  if (events.data.length === 0) {
-                    hasMore = false;
-                    break;
-                  }
-                  
-                  console.log(`Обработка страницы ${page}, событий: ${events.data.length}`);
-                  
-                  for (const event of events.data) {
-                    // Обрабатываем больше типов событий
-                    if ((event.type === 'PushEvent' || 
-                         event.type === 'PullRequestEvent' || 
-                         event.type === 'IssuesEvent' ||
-                         event.type === 'IssueCommentEvent' ||
-                         event.type === 'PullRequestReviewEvent' ||
-                         event.type === 'PullRequestReviewCommentEvent') 
-                        && event.repo 
-                        && event.repo.full_name 
-                        && !event.repo.full_name.startsWith(username + '/')) {
-                      const repoName = event.repo.full_name;
-                      
-                      if (!repos.has(repoName)) {
-                        try {
-                          const [owner, repo] = repoName.split('/');
-                          const repoData = await github.rest.repos.get({
-                            owner: owner,
-                            repo: repo
-                          });
-                          
-                          repos.set(repoName, {
-                            name: repoName,
-                            description: repoData.data.description || 'Без описания',
-                            stars: repoData.data.stargazers_count,
-                            language: repoData.data.language || 'N/A',
-                            url: repoData.data.html_url,
-                            updated: repoData.data.updated_at
-                          });
-                          
-                          console.log(`Добавлен репозиторий: ${repoName}`);
-                        } catch (error) {
-                          console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+              // GraphQL запрос для получения PR где пользователь автор
+              const prQuery = `
+                query($username: String!, $cursor: String) {
+                  user(login: $username) {
+                    pullRequests(first: 100, after: $cursor, states: [MERGED, OPEN, CLOSED]) {
+                      pageInfo {
+                        hasNextPage
+                        endCursor
+                      }
+                      nodes {
+                        repository {
+                          nameWithOwner
+                          description
+                          stargazerCount
+                          primaryLanguage {
+                            name
+                          }
+                          url
+                          updatedAt
+                          owner {
+                            login
+                          }
                         }
                       }
                     }
                   }
+                }
+              `;
+              
+              // Получаем Pull Requests
+              let prCursor = null;
+              let hasMorePRs = true;
+              let prPage = 0;
+              const maxPRPages = 5;
+              
+              while (hasMorePRs && prPage < maxPRPages) {
+                try {
+                  const prResponse = await github.graphql(prQuery, {
+                    username: username,
+                    cursor: prCursor
+                  });
                   
-                  page++;
-                  if (events.data.length < 100) hasMore = false;
+                  if (prResponse.user && prResponse.user.pullRequests) {
+                    const prs = prResponse.user.pullRequests.nodes;
+                    const pageInfo = prResponse.user.pullRequests.pageInfo;
+                    
+                    console.log(`Обработка PR страницы ${prPage + 1}, найдено: ${prs.length}`);
+                    
+                    for (const pr of prs) {
+                      if (pr.repository && pr.repository.nameWithOwner) {
+                        const repoName = pr.repository.nameWithOwner;
+                        const owner = pr.repository.owner.login;
+                        
+                        // Исключаем собственные репозитории
+                        if (owner !== username && !repos.has(repoName)) {
+                          repos.set(repoName, {
+                            name: repoName,
+                            description: pr.repository.description || 'Без описания',
+                            stars: pr.repository.stargazerCount || 0,
+                            language: pr.repository.primaryLanguage?.name || 'N/A',
+                            url: pr.repository.url,
+                            updated: pr.repository.updatedAt
+                          });
+                          console.log(`Добавлен репозиторий через PR: ${repoName}`);
+                        }
+                      }
+                    }
+                    
+                    hasMorePRs = pageInfo.hasNextPage;
+                    prCursor = pageInfo.endCursor;
+                    prPage++;
+                  } else {
+                    hasMorePRs = false;
+                  }
                 } catch (error) {
-                  console.log(`Ошибка на странице ${page}: ${error.message}`);
-                  hasMore = false;
+                  console.log(`Ошибка при получении PR: ${error.message}`);
+                  hasMorePRs = false;
                 }
               }
               
-              // Метод 2: Поиск через коммиты (дополнительный способ)
-              console.log('Поиск через коммиты...');
-              try {
-                // Используем поиск по коммитам где пользователь автор
-                const searchQuery = `author:${username} -user:${username}`;
-                const searchResults = await github.rest.search.commits({
-                  q: searchQuery,
-                  per_page: 100
-                });
-                
-                if (searchResults.data.items && searchResults.data.items.length > 0) {
-                  for (const commit of searchResults.data.items) {
-                    if (commit.repository && commit.repository.full_name) {
-                      const repoName = commit.repository.full_name;
-                      
-                      if (!repoName.startsWith(username + '/') && !repos.has(repoName)) {
-                        try {
-                          const [owner, repo] = repoName.split('/');
-                          const repoData = await github.rest.repos.get({
-                            owner: owner,
-                            repo: repo
-                          });
-                          
-                          repos.set(repoName, {
-                            name: repoName,
-                            description: repoData.data.description || 'Без описания',
-                            stars: repoData.data.stargazers_count,
-                            language: repoData.data.language || 'N/A',
-                            url: repoData.data.html_url,
-                            updated: repoData.data.updated_at
-                          });
-                          
-                          console.log(`Добавлен репозиторий через поиск коммитов: ${repoName}`);
-                        } catch (error) {
-                          console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+              // GraphQL запрос для получения Issues где пользователь автор
+              const issueQuery = `
+                query($username: String!, $cursor: String) {
+                  user(login: $username) {
+                    issues(first: 100, after: $cursor, states: [OPEN, CLOSED]) {
+                      pageInfo {
+                        hasNextPage
+                        endCursor
+                      }
+                      nodes {
+                        repository {
+                          nameWithOwner
+                          description
+                          stargazerCount
+                          primaryLanguage {
+                            name
+                          }
+                          url
+                          updatedAt
+                          owner {
+                            login
+                          }
                         }
                       }
                     }
                   }
                 }
-              } catch (error) {
-                console.log(`Ошибка при поиске коммитов: ${error.message}`);
+              `;
+              
+              // Получаем Issues
+              let issueCursor = null;
+              let hasMoreIssues = true;
+              let issuePage = 0;
+              const maxIssuePages = 3;
+              
+              while (hasMoreIssues && issuePage < maxIssuePages) {
+                try {
+                  const issueResponse = await github.graphql(issueQuery, {
+                    username: username,
+                    cursor: issueCursor
+                  });
+                  
+                  if (issueResponse.user && issueResponse.user.issues) {
+                    const issues = issueResponse.user.issues.nodes;
+                    const pageInfo = issueResponse.user.issues.pageInfo;
+                    
+                    console.log(`Обработка Issues страницы ${issuePage + 1}, найдено: ${issues.length}`);
+                    
+                    for (const issue of issues) {
+                      if (issue.repository && issue.repository.nameWithOwner) {
+                        const repoName = issue.repository.nameWithOwner;
+                        const owner = issue.repository.owner.login;
+                        
+                        // Исключаем собственные репозитории
+                        if (owner !== username && !repos.has(repoName)) {
+                          repos.set(repoName, {
+                            name: repoName,
+                            description: issue.repository.description || 'Без описания',
+                            stars: issue.repository.stargazerCount || 0,
+                            language: issue.repository.primaryLanguage?.name || 'N/A',
+                            url: issue.repository.url,
+                            updated: issue.repository.updatedAt
+                          });
+                          console.log(`Добавлен репозиторий через Issue: ${repoName}`);
+                        }
+                      }
+                    }
+                    
+                    hasMoreIssues = pageInfo.hasNextPage;
+                    issueCursor = pageInfo.endCursor;
+                    issuePage++;
+                  } else {
+                    hasMoreIssues = false;
+                  }
+                } catch (error) {
+                  console.log(`Ошибка при получении Issues: ${error.message}`);
+                  hasMoreIssues = false;
+                }
               }
               
             } catch (error) {

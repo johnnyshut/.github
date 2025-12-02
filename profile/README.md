@@ -35,11 +35,28 @@
 
 <!-- CONTRIBUTED_REPOS_START -->
 
-<h3 align="left">📦 Проекты где я контрибьютор</h3>
+<h3 align="left">Проекты где я контрибьютор</h3>
 
-[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-0%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
+[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
 
-_Пока нет проектов для отображения_
+| Репозиторий | Описание | ⭐ | Язык |
+|-------------|----------|----|------|
+| [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 25 | JavaScript |
+| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 227 | TypeScript |
+| [kindlysamy/DV](https://github.com/kindlysamy/DV) | Без описания | 0 | Batchfile |
+| [sergeybyvalcev/sonar_repo](https://github.com/sergeybyvalcev/sonar_repo) | Без описания | 0 | 1C Enterprise |
+| [infostart-hub/infostart-erp-community](https://github.com/infostart-hub/infostart-erp-community) | Модульная (open source) конфигурация Infostart ERP... | 27 | 1C Enterprise |
+| [rendaf007/8_otus](https://github.com/rendaf007/8_otus) | Без описания | 0 | Batchfile |
+| [SoVa03/OtusArch](https://github.com/SoVa03/OtusArch) | Без описания | 0 | Batchfile |
+| [plotnikovstavrpl/vanessa](https://github.com/plotnikovstavrpl/vanessa) | Без описания | 0 | Batchfile |
+| [kassper31/Tree](https://github.com/kassper31/Tree) | My family tree | 0 | Batchfile |
+| [VTV-git/OTUS.](https://github.com/VTV-git/OTUS.) | Без описания | 0 | Batchfile |
+| [NastyFa/Project_NastyFa](https://github.com/NastyFa/Project_NastyFa) | Без описания | 0 | Batchfile |
+| [airat007/lesson7](https://github.com/airat007/lesson7) | Без описания | 0 | Batchfile |
+| [VladislavArkh/Project_1C](https://github.com/VladislavArkh/Project_1C) | Без описания | 0 | Batchfile |
+| [oleg-korelin/dz2](https://github.com/oleg-korelin/dz2) | Без описания | 0 | Batchfile |
+| [Abelenja/GitReposit](https://github.com/Abelenja/GitReposit) | Без описания | 0 | Batchfile |
+
 
 <!-- CONTRIBUTED_REPOS_END -->
 

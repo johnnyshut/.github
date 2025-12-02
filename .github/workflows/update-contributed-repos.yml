@@ -29,63 +29,123 @@ jobs:
             const username = 'johnnyshut';
             const repos = new Map();
             
-            // Получаем репозитории через поиск коммитов пользователя
             try {
-              // Получаем события пользователя (PushEvent, PullRequestEvent и т.д.)
+              // Метод 1: Поиск через события пользователя
+              console.log('Поиск через события пользователя...');
               let page = 1;
               let hasMore = true;
-              const maxPages = 3; // Ограничиваем для скорости
+              const maxPages = 10; // Увеличиваем количество страниц
               
               while (hasMore && page <= maxPages) {
-                const events = await github.rest.activity.listPublicEventsForUser({
-                  username: username,
-                  per_page: 100,
-                  page: page
+                try {
+                  const events = await github.rest.activity.listPublicEventsForUser({
+                    username: username,
+                    per_page: 100,
+                    page: page
+                  });
+                  
+                  if (events.data.length === 0) {
+                    hasMore = false;
+                    break;
+                  }
+                  
+                  console.log(`Обработка страницы ${page}, событий: ${events.data.length}`);
+                  
+                  for (const event of events.data) {
+                    // Обрабатываем больше типов событий
+                    if ((event.type === 'PushEvent' || 
+                         event.type === 'PullRequestEvent' || 
+                         event.type === 'IssuesEvent' ||
+                         event.type === 'IssueCommentEvent' ||
+                         event.type === 'PullRequestReviewEvent' ||
+                         event.type === 'PullRequestReviewCommentEvent') 
+                        && event.repo 
+                        && event.repo.full_name 
+                        && !event.repo.full_name.startsWith(username + '/')) {
+                      const repoName = event.repo.full_name;
+                      
+                      if (!repos.has(repoName)) {
+                        try {
+                          const [owner, repo] = repoName.split('/');
+                          const repoData = await github.rest.repos.get({
+                            owner: owner,
+                            repo: repo
+                          });
+                          
+                          repos.set(repoName, {
+                            name: repoName,
+                            description: repoData.data.description || 'Без описания',
+                            stars: repoData.data.stargazers_count,
+                            language: repoData.data.language || 'N/A',
+                            url: repoData.data.html_url,
+                            updated: repoData.data.updated_at
+                          });
+                          
+                          console.log(`Добавлен репозиторий: ${repoName}`);
+                        } catch (error) {
+                          console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+                        }
+                      }
+                    }
+                  }
+                  
+                  page++;
+                  if (events.data.length < 100) hasMore = false;
+                } catch (error) {
+                  console.log(`Ошибка на странице ${page}: ${error.message}`);
+                  hasMore = false;
+                }
+              }
+              
+              // Метод 2: Поиск через коммиты (дополнительный способ)
+              console.log('Поиск через коммиты...');
+              try {
+                // Используем поиск по коммитам где пользователь автор
+                const searchQuery = `author:${username} -user:${username}`;
+                const searchResults = await github.rest.search.commits({
+                  q: searchQuery,
+                  per_page: 100
                 });
                 
-                if (events.data.length === 0) {
-                  hasMore = false;
-                  break;
-                }
-                
-                for (const event of events.data) {
-                  // Обрабатываем только PushEvent и PullRequestEvent
-                  if ((event.type === 'PushEvent' || event.type === 'PullRequestEvent') 
-                      && event.repo 
-                      && event.repo.full_name 
-                      && !event.repo.full_name.startsWith(username + '/')) {
-                    const repoName = event.repo.full_name;
-                    
-                    if (!repos.has(repoName)) {
-                      try {
-                        const [owner, repo] = repoName.split('/');
-                        const repoData = await github.rest.repos.get({
-                          owner: owner,
-                          repo: repo
-                        });
-                        
-                        repos.set(repoName, {
-                          name: repoName,
-                          description: repoData.data.description || 'Без описания',
-                          stars: repoData.data.stargazers_count,
-                          language: repoData.data.language || 'N/A',
-                          url: repoData.data.html_url,
-                          updated: repoData.data.updated_at
-                        });
-                      } catch (error) {
-                        // Пропускаем приватные или недоступные репозитории
-                        console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+                if (searchResults.data.items && searchResults.data.items.length > 0) {
+                  for (const commit of searchResults.data.items) {
+                    if (commit.repository && commit.repository.full_name) {
+                      const repoName = commit.repository.full_name;
+                      
+                      if (!repoName.startsWith(username + '/') && !repos.has(repoName)) {
+                        try {
+                          const [owner, repo] = repoName.split('/');
+                          const repoData = await github.rest.repos.get({
+                            owner: owner,
+                            repo: repo
+                          });
+                          
+                          repos.set(repoName, {
+                            name: repoName,
+                            description: repoData.data.description || 'Без описания',
+                            stars: repoData.data.stargazers_count,
+                            language: repoData.data.language || 'N/A',
+                            url: repoData.data.html_url,
+                            updated: repoData.data.updated_at
+                          });
+                          
+                          console.log(`Добавлен репозиторий через поиск коммитов: ${repoName}`);
+                        } catch (error) {
+                          console.log(`Пропущен репозиторий ${repoName}: ${error.message}`);
+                        }
                       }
                     }
                   }
                 }
-                
-                page++;
-                if (events.data.length < 100) hasMore = false;
+              } catch (error) {
+                console.log(`Ошибка при поиске коммитов: ${error.message}`);
               }
+              
             } catch (error) {
-              console.log(`Ошибка при получении репозиториев: ${error.message}`);
+              console.log(`Общая ошибка при получении репозиториев: ${error.message}`);
             }
+            
+            console.log(`Всего найдено репозиториев: ${repos.size}`);
             
             // Сортируем по дате обновления и берем топ 15
             const sortedRepos = Array.from(repos.values())
@@ -140,7 +200,7 @@ jobs:
               const reposMarkdown = process.env.REPOS_MARKDOWN || '';
               const reposCount = process.env.REPOS_COUNT || '0';
               
-              const newSection = `\n\n<h3 align="left">📦 Проекты где я контрибьютор</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
+              const newSection = `\n\n<h3 align="left">Проекты где я контрибьютор</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
               
               readme = before + newSection + after;
               

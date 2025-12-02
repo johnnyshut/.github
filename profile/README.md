@@ -34,6 +34,13 @@
 </div>
 
 <!-- CONTRIBUTED_REPOS_START -->
+
+<h3 align="left">📦 Проекты где я контрибьютор</h3>
+
+[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-0%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
+
+_Пока нет проектов для отображения_
+
 <!-- CONTRIBUTED_REPOS_END -->
 
 ## 🫶 Поставьте 🌟🌟🌟 какому-нибудь репозиторию 🫶

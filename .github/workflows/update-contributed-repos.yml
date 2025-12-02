@@ -207,17 +207,15 @@ jobs:
             
             let markdown = '';
             if (sortedRepos.length > 0) {
-              markdown = '| Репозиторий | Описание | ⭐ | Язык | PR | Issues |\n';
-              markdown += '|-------------|----------|----|------|----|--------|\n';
+              markdown = '| Репозиторий | Описание | ⭐ | Язык |\n';
+              markdown += '|-------------|----------|----|------|\n';
               
               for (const repo of sortedRepos) {
                 const desc = repo.description.length > 50 
                   ? repo.description.substring(0, 50) + '...' 
                   : repo.description;
                 const safeDesc = desc.replace(/\|/g, '\\|').replace(/\n/g, ' ');
-                const prCount = repo.prCount || 0;
-                const issueCount = repo.issueCount || 0;
-                markdown += `| [${repo.name}](${repo.url}) | ${safeDesc} | ${repo.stars} | ${repo.language} | ${prCount} | ${issueCount} |\n`;
+                markdown += `| [${repo.name}](${repo.url}) | ${safeDesc} | ${repo.stars} | ${repo.language} |\n`;
               }
             } else {
               markdown = '_Пока нет проектов для отображения_';

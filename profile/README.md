@@ -33,9 +33,11 @@
 
 </div>
 
+## 🫶 Поставьте 🌟🌟🌟 какому-нибудь репозиторию 🫶
+
 <!-- CONTRIBUTED_REPOS_START -->
 
-<h3 align="left">Проекты где я контрибьютор</h3>
+<h3 align="left">Внес вклад в проекты</h3>
 
 [![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
 
@@ -57,10 +59,7 @@
 | [oleg-korelin/dz2](https://github.com/oleg-korelin/dz2) | Без описания | 0 | Batchfile |
 | [Abelenja/GitReposit](https://github.com/Abelenja/GitReposit) | Без описания | 0 | Batchfile |
 
-
 <!-- CONTRIBUTED_REPOS_END -->
-
-## 🫶 Поставьте 🌟🌟🌟 какому-нибудь репозиторию 🫶
 
 <div align="left">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" alt="Footer decoration"/>

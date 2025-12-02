@@ -2,9 +2,8 @@ name: Update Contributed Repositories
 
 on:
   schedule:
-    # Запускается каждый день в 00:00 UTC
     - cron: '0 0 * * *'
-  workflow_dispatch: # Позволяет запускать вручную
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -30,11 +29,6 @@ jobs:
             const repos = new Map();
             
             try {
-              // Используем GraphQL API для получения Pull Requests и Issues
-              // Это аналогично секции "Contributed to" на GitHub профиле
-              console.log('Поиск через Pull Requests и Issues (как в секции Contributed to)...');
-              
-              // GraphQL запрос для получения PR где пользователь автор
               const prQuery = `
                 query($username: String!, $cursor: String) {
                   user(login: $username) {
@@ -63,7 +57,6 @@ jobs:
                 }
               `;
               
-              // Получаем Pull Requests
               let prCursor = null;
               let hasMorePRs = true;
               let prPage = 0;
@@ -80,24 +73,27 @@ jobs:
                     const prs = prResponse.user.pullRequests.nodes;
                     const pageInfo = prResponse.user.pullRequests.pageInfo;
                     
-                    console.log(`Обработка PR страницы ${prPage + 1}, найдено: ${prs.length}`);
-                    
                     for (const pr of prs) {
                       if (pr.repository && pr.repository.nameWithOwner) {
                         const repoName = pr.repository.nameWithOwner;
                         const owner = pr.repository.owner.login;
                         
-                        // Исключаем собственные репозитории
-                        if (owner !== username && !repos.has(repoName)) {
-                          repos.set(repoName, {
-                            name: repoName,
-                            description: pr.repository.description || 'Без описания',
-                            stars: pr.repository.stargazerCount || 0,
-                            language: pr.repository.primaryLanguage?.name || 'N/A',
-                            url: pr.repository.url,
-                            updated: pr.repository.updatedAt
-                          });
-                          console.log(`Добавлен репозиторий через PR: ${repoName}`);
+                        if (owner !== username) {
+                          if (!repos.has(repoName)) {
+                            repos.set(repoName, {
+                              name: repoName,
+                              description: pr.repository.description || 'Без описания',
+                              stars: pr.repository.stargazerCount || 0,
+                              language: pr.repository.primaryLanguage?.name || 'N/A',
+                              url: pr.repository.url,
+                              updated: pr.repository.updatedAt,
+                              prCount: 0,
+                              issueCount: 0
+                            });
+                          }
+                          const repo = repos.get(repoName);
+                          repo.prCount = (repo.prCount || 0) + 1;
+                          repos.set(repoName, repo);
                         }
                       }
                     }
@@ -109,12 +105,10 @@ jobs:
                     hasMorePRs = false;
                   }
                 } catch (error) {
-                  console.log(`Ошибка при получении PR: ${error.message}`);
                   hasMorePRs = false;
                 }
               }
               
-              // GraphQL запрос для получения Issues где пользователь автор
               const issueQuery = `
                 query($username: String!, $cursor: String) {
                   user(login: $username) {
@@ -143,7 +137,6 @@ jobs:
                 }
               `;
               
-              // Получаем Issues
               let issueCursor = null;
               let hasMoreIssues = true;
               let issuePage = 0;
@@ -160,24 +153,27 @@ jobs:
                     const issues = issueResponse.user.issues.nodes;
                     const pageInfo = issueResponse.user.issues.pageInfo;
                     
-                    console.log(`Обработка Issues страницы ${issuePage + 1}, найдено: ${issues.length}`);
-                    
                     for (const issue of issues) {
                       if (issue.repository && issue.repository.nameWithOwner) {
                         const repoName = issue.repository.nameWithOwner;
                         const owner = issue.repository.owner.login;
                         
-                        // Исключаем собственные репозитории
-                        if (owner !== username && !repos.has(repoName)) {
-                          repos.set(repoName, {
-                            name: repoName,
-                            description: issue.repository.description || 'Без описания',
-                            stars: issue.repository.stargazerCount || 0,
-                            language: issue.repository.primaryLanguage?.name || 'N/A',
-                            url: issue.repository.url,
-                            updated: issue.repository.updatedAt
-                          });
-                          console.log(`Добавлен репозиторий через Issue: ${repoName}`);
+                        if (owner !== username) {
+                          if (!repos.has(repoName)) {
+                            repos.set(repoName, {
+                              name: repoName,
+                              description: issue.repository.description || 'Без описания',
+                              stars: issue.repository.stargazerCount || 0,
+                              language: issue.repository.primaryLanguage?.name || 'N/A',
+                              url: issue.repository.url,
+                              updated: issue.repository.updatedAt,
+                              prCount: 0,
+                              issueCount: 0
+                            });
+                          }
+                          const repo = repos.get(repoName);
+                          repo.issueCount = (repo.issueCount || 0) + 1;
+                          repos.set(repoName, repo);
                         }
                       }
                     }
@@ -189,35 +185,39 @@ jobs:
                     hasMoreIssues = false;
                   }
                 } catch (error) {
-                  console.log(`Ошибка при получении Issues: ${error.message}`);
                   hasMoreIssues = false;
                 }
               }
               
             } catch (error) {
-              console.log(`Общая ошибка при получении репозиториев: ${error.message}`);
             }
             
-            console.log(`Всего найдено репозиториев: ${repos.size}`);
-            
-            // Сортируем по дате обновления и берем топ 15
             const sortedRepos = Array.from(repos.values())
-              .sort((a, b) => new Date(b.updated) - new Date(a.updated))
+              .map(repo => ({
+                ...repo,
+                totalContributions: (repo.prCount || 0) + (repo.issueCount || 0)
+              }))
+              .sort((a, b) => {
+                if (b.totalContributions !== a.totalContributions) {
+                  return b.totalContributions - a.totalContributions;
+                }
+                return a.name.localeCompare(b.name);
+              })
               .slice(0, 15);
             
-            // Формируем markdown таблицу
             let markdown = '';
             if (sortedRepos.length > 0) {
-              markdown = '| Репозиторий | Описание | ⭐ | Язык |\n';
-              markdown += '|-------------|----------|----|------|\n';
+              markdown = '| Репозиторий | Описание | ⭐ | Язык | PR | Issues |\n';
+              markdown += '|-------------|----------|----|------|----|--------|\n';
               
               for (const repo of sortedRepos) {
                 const desc = repo.description.length > 50 
                   ? repo.description.substring(0, 50) + '...' 
                   : repo.description;
-                // Экранируем символы для markdown
                 const safeDesc = desc.replace(/\|/g, '\\|').replace(/\n/g, ' ');
-                markdown += `| [${repo.name}](${repo.url}) | ${safeDesc} | ${repo.stars} | ${repo.language} |\n`;
+                const prCount = repo.prCount || 0;
+                const issueCount = repo.issueCount || 0;
+                markdown += `| [${repo.name}](${repo.url}) | ${safeDesc} | ${repo.stars} | ${repo.language} | ${prCount} | ${issueCount} |\n`;
               }
             } else {
               markdown = '_Пока нет проектов для отображения_';
@@ -239,7 +239,6 @@ jobs:
             const readmePath = path.join(process.cwd(), 'profile', 'README.md');
             let readme = fs.readFileSync(readmePath, 'utf8');
             
-            // Находим секцию с проектами (между маркерами)
             const startMarker = '<!-- CONTRIBUTED_REPOS_START -->';
             const endMarker = '<!-- CONTRIBUTED_REPOS_END -->';
             
@@ -253,7 +252,7 @@ jobs:
               const reposMarkdown = process.env.REPOS_MARKDOWN || '';
               const reposCount = process.env.REPOS_COUNT || '0';
               
-              const newSection = `\n\n<h3 align="left">Проекты где я контрибьютор</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
+              const newSection = `\n\n<h3 align="left">Внес вклад в проекты</h3>\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
               
               readme = before + newSection + after;
               
@@ -265,6 +264,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add profile/README.md
-          git diff --staged --quiet || git commit -m "chore: обновить список репозиториев где я контрибьютор" || exit 0
+          git diff --staged --quiet || git commit -m "chore: обновление списка проектов в README" || exit 0
           git push
 

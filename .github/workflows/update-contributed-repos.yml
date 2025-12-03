@@ -2,7 +2,7 @@ name: Update Contributed Repositories
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 1 * *'
   workflow_dispatch:
   push:
     branches:
@@ -250,7 +250,7 @@ jobs:
               const reposMarkdown = process.env.REPOS_MARKDOWN || '';
               const reposCount = process.env.REPOS_COUNT || '0';
               
-              const newSection = `\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)\n\n${reposMarkdown}\n\n`;
+              const newSection = `\n\n[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-${reposCount}%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)\n\n${reposMarkdown}\n\n`;
               
               readme = before + newSection + after;
               

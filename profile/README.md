@@ -35,7 +35,7 @@
 
 <!-- CONTRIBUTED_REPOS_START -->
 
-[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=Repositories)
+[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
@@ -49,7 +49,7 @@
 | [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 100 | 1C Enterprise |
 | [firstBitMarksistskaya/jenkins-lib](https://github.com/firstBitMarksistskaya/jenkins-lib) | Jenkins shared library для 1С:Предприятие 8 | 193 | Groovy |
 | [Nivanchenko/bootstrapper](https://github.com/Nivanchenko/bootstrapper) | Многофункциональный набор инструментов для 1С разр... | 98 | CSS |
-| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11251 | CSS |
+| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11253 | CSS |
 | [oscript-library/v8runner](https://github.com/oscript-library/v8runner) | Управление запуском 1С из командной строки | 114 | 1C Enterprise |
 | [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 360 | 1C Enterprise |
 | [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |

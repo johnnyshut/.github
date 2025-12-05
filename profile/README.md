@@ -4,7 +4,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header" alt="Header decoration"/>
 </div>
 
-[![Static Badge](https://img.shields.io/badge/my%20telegram-channel-blue)](https://t.me/YellowHummer) [![Static Badge](https://img.shields.io/badge/infostart-profile-blue)](http://infostart.ru/profile/534321/) ![Profile Views](https://komarev.com/ghpvc/?username=johnnyshut&color=blue) [![GitHub User's stars](https://img.shields.io/github/stars/johnnyshut?style=flat)](https://github.com/johnnyshut?tab=repositories&q=&type=&language=&sort=stargazers)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/YellowHummer) [![Infostart](https://img.shields.io/badge/Infostart-Profile-blue)](http://infostart.ru/profile/534321/) ![Profile Views](https://komarev.com/ghpvc/?username=johnnyshut&color=blue) [![GitHub User's stars](https://img.shields.io/github/stars/johnnyshut?style=flat)](https://github.com/johnnyshut?tab=repositories&sort=stargazers)
 
 Работаю на полной занятности
 
@@ -54,7 +54,6 @@
 | [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 360 | 1C Enterprise |
 | [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
 | [1C-Migration-Lab/1c-analyzer-wiki-rag](https://github.com/1C-Migration-Lab/1c-analyzer-wiki-rag) | Открытый проект по анализу конфигураций 1С, постро... | 39 | 1C Enterprise |
-
 
 <!-- CONTRIBUTED_REPOS_END -->
 

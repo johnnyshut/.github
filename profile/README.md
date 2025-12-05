@@ -28,11 +28,7 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=johnnyshut&theme=github_dark_dimmed&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub stats" />
-
-<a href="https://github.com/johnnyshut">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact" alt="Top languages" />
-</a>
+<img src="https://github-readme-stats.vercel.app/api?username=johnnyshut&theme=github_dark_dimmed&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub stats"> <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact" height="195px" alt="Top languages"></a></p>
 
 </div>
 

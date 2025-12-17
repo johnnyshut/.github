@@ -39,8 +39,8 @@
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
 | [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 25 | JavaScript |
-| [yellow-hammer/1c-platform-tools](https://github.com/yellow-hammer/1c-platform-tools) | Расширение для Visual Studio Code с инструментами ... | 27 | TypeScript |
-| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 363 | Java |
+| [yellow-hammer/1c-platform-tools](https://github.com/yellow-hammer/1c-platform-tools) | Расширение для Visual Studio Code с инструментами ... | 34 | TypeScript |
+| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 364 | Java |
 | [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 52 | Java |
 | [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 227 | TypeScript |
 | [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 957 | 1C Enterprise |

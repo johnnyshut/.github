@@ -203,7 +203,7 @@ jobs:
                 }
                 return a.name.localeCompare(b.name);
               })
-              .slice(0, 15);
+              .slice(0, 20);
             
             let markdown = '';
             if (sortedRepos.length > 0) {

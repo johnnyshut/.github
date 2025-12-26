@@ -34,7 +34,7 @@
 
 <!-- CONTRIBUTED_REPOS_START -->
 
-[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-15%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
+[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-20%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
@@ -53,6 +53,11 @@
 | [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11331 | CSS |
 | [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 264 | TypeScript |
 | [oscript-library/v8runner](https://github.com/oscript-library/v8runner) | Управление запуском 1С из командной строки | 116 | 1C Enterprise |
+| [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 360 | 1C Enterprise |
+| [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
+| [1C-Migration-Lab/1c-analyzer-wiki-rag](https://github.com/1C-Migration-Lab/1c-analyzer-wiki-rag) | Открытый проект по анализу конфигураций 1С, постро... | 39 | 1C Enterprise |
+| [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 128 | 1C Enterprise |
+| [1c-syntax/ssl_3_1_edt](https://github.com/1c-syntax/ssl_3_1_edt) | Без описания | 3 | 1C Enterprise |
 
 
 <!-- CONTRIBUTED_REPOS_END -->

@@ -34,7 +34,7 @@
 
 <!-- CONTRIBUTED_REPOS_START -->
 
-[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-20%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
+[![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-25%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
@@ -58,6 +58,11 @@
 | [1C-Migration-Lab/1c-analyzer-wiki-rag](https://github.com/1C-Migration-Lab/1c-analyzer-wiki-rag) | Открытый проект по анализу конфигураций 1С, постро... | 39 | 1C Enterprise |
 | [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 128 | 1C Enterprise |
 | [1c-syntax/ssl_3_1_edt](https://github.com/1c-syntax/ssl_3_1_edt) | Без описания | 3 | 1C Enterprise |
+| [akpaevj/oneswiss](https://github.com/akpaevj/oneswiss) | Система обслуживания и мониторинга информационных ... | 114 | C# |
+| [BITERP/PinkRabbitMQ](https://github.com/BITERP/PinkRabbitMQ) | Внешняя Native API компонента для взаимодействия с... | 290 | C |
+| [LazarenkoA/GigaCommits](https://github.com/LazarenkoA/GigaCommits) | cli инструмент для генерации сообщений для git com... | 5 | Go |
+| [LazarenkoA/prometheus_1C_exporter](https://github.com/LazarenkoA/prometheus_1C_exporter) | Мониторинг кластера 1С, отправка данных в promethe... | 177 | Go |
+| [Nivanchenko/IE_2023_MK_DEMO](https://github.com/Nivanchenko/IE_2023_MK_DEMO) | Без описания | 12 | 1C Enterprise |
 
 
 <!-- CONTRIBUTED_REPOS_END -->

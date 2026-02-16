@@ -38,31 +38,31 @@
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
-| [yellow-hammer/1c-platform-tools](https://github.com/yellow-hammer/1c-platform-tools) | Расширение для Visual Studio Code с инструментами ... | 106 | TypeScript |
+| [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | 1C: Platform Tools расширение для Visual Studio Co... | 112 | TypeScript |
 | [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 35 | JavaScript |
-| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 384 | Java |
+| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 387 | Java |
 | [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 55 | Java |
 | [infina15/oproxy](https://github.com/infina15/oproxy) | TCP прокси-сервер хранилища конфигураций 1С | 68 | 1C Enterprise |
 | [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 233 | TypeScript |
-| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 967 | 1C Enterprise |
+| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 976 | 1C Enterprise |
 | [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 243 | 1C Enterprise |
-| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 103 | 1C Enterprise |
+| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 104 | 1C Enterprise |
 | [firstBitMarksistskaya/jenkins-lib](https://github.com/firstBitMarksistskaya/jenkins-lib) | Jenkins shared library для 1С:Предприятие 8 | 196 | Groovy |
 | [Nivanchenko/bootstrapper](https://github.com/Nivanchenko/bootstrapper) | Многофункциональный набор инструментов для 1С разр... | 101 | CSS |
 | [astrizhachuk/1c-extension-pack](https://github.com/astrizhachuk/1c-extension-pack) | A collection of extensions for 1C (BSL) Developmen... | 3 | N/A |
-| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11453 | CSS |
-| [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 281 | TypeScript |
+| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11466 | CSS |
+| [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 287 | TypeScript |
 | [oscript-library/v8runner](https://github.com/oscript-library/v8runner) | Управление запуском 1С из командной строки | 118 | 1C Enterprise |
 | [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 362 | 1C Enterprise |
+| [yellow-hammer/vanessa-bootstrap](https://github.com/yellow-hammer/vanessa-bootstrap) | Шаблон правильной разработки на платформе 1С: Пред... | 9 | 1C Enterprise |
 | [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
 | [1C-Migration-Lab/1c-analyzer-wiki-rag](https://github.com/1C-Migration-Lab/1c-analyzer-wiki-rag) | Открытый проект по анализу конфигураций 1С, постро... | 38 | 1C Enterprise |
 | [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 131 | 1C Enterprise |
 | [1c-syntax/ssl_3_1_edt](https://github.com/1c-syntax/ssl_3_1_edt) | Без описания | 6 | 1C Enterprise |
-| [akpaevj/oneswiss](https://github.com/akpaevj/oneswiss) | Система обслуживания и мониторинга информационных ... | 117 | C# |
+| [akpaevj/oneswiss](https://github.com/akpaevj/oneswiss) | Система обслуживания и мониторинга информационных ... | 118 | C# |
+| [asweetand-a11y/DevTool1C](https://github.com/asweetand-a11y/DevTool1C) | Расширение для Cursor с инструментами разработки д... | 6 | 1C Enterprise |
 | [BITERP/PinkRabbitMQ](https://github.com/BITERP/PinkRabbitMQ) | Внешняя Native API компонента для взаимодействия с... | 295 | C |
 | [LazarenkoA/GigaCommits](https://github.com/LazarenkoA/GigaCommits) | cli инструмент для генерации сообщений для git com... | 7 | Go |
-| [LazarenkoA/prometheus_1C_exporter](https://github.com/LazarenkoA/prometheus_1C_exporter) | Мониторинг кластера 1С, отправка данных в promethe... | 183 | Go |
-| [Macegor/filewatcher](https://github.com/Macegor/filewatcher) | Библиотека для отслеживания изменений в файловой с... | 8 | 1C Enterprise |
 
 
 <!-- CONTRIBUTED_REPOS_END -->

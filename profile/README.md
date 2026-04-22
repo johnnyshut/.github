@@ -12,32 +12,43 @@
 
 ## Мои инструменты
 
-<div align="left">
-  <a href="https://v8.1c.ru" target="_blank"><img src="https://github.com/Oxotka/Oxotka/blob/main/src/logo1cm.png" alt="1C" width="32" height="32" /></a>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="32" height="32" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original-wordmark.svg" alt="GitLab" width="32" height="32" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub" width="32" height="32" />
-  <a href="https://www.jenkins.io" target="_blank"><img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" width="32" height="32" /></a>
-  <a href="https://www.gnu.org/software/bash/" target="_blank"><img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="Bash" width="32" height="32" /></a>
-  <a href="https://www.docker.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" width="32" height="32" /></a>
-  <a href="https://git-scm.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" width="32" height="32" /></a>
-  <a href="https://www.python.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="32" height="32" /></a>
-  <a href="https://javascript.ru" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" width="32" height="32" /></a>
-  <a href="https://www.java.com" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java" width="32" height="32" /></a>
-</div>
+<table>
+  <tr>
+    <td><a href="https://git-scm.com/"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" width="32" height="32" /></a></td>
+    <td><a href="https://github.com"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/github-color.svg" alt="GitHub" width="32" height="32" /></a></td>
+    <td><a href="https://about.gitlab.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" width="32" height="32" /></a></td>
+    <td><a href="https://code.visualstudio.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="32" height="32" /></a></td>
+    <td><a href="https://www.jenkins.io"><img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" width="32" height="32" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://www.docker.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="32" height="32" /></a></td>
+    <td><a href="https://www.gnu.org/software/bash/"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/bash-color.svg" alt="Bash" width="32" height="32" /></a></td>
+    <td><a href="https://v8.1c.ru"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/logo1c.png" alt="1C" width="32" height="32" /></a></td>
+    <td><a href="https://oscript.io/"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/onescript-blue.svg" alt="OneScript" width="32" height="32" /></a></td>
+    <td><a href="https://www.python.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="32" height="32" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://javascript.ru"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="32" height="32" /></a></td>
+    <td><a href="https://www.java.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="32" height="32" /></a></td>
+    <td><a href="https://dotnet.microsoft.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET" width="32" height="32" /></a></td>
+    <td><a href="https://prometheus.io/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus" width="32" height="32" /></a></td>
+    <td><a href="https://grafana.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" width="32" height="32" /></a></td>
+  </tr>
+</table>
 
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=johnnyshut&theme=github_dark_dimmed&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub stats"> <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact" height="195px" alt="Top languages"></a></p>
-
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=johnnyshut&theme=github_dark_dimmed&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub stats" />
+  <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=johnnyshut&langs_count=10&theme=github_dark_dimmed&show_icons=true&hide_border=false&layout=compact" height="195" alt="Top languages" />
+  </a>
+</p>
 
 <!-- CONTRIBUTED_REPOS_START -->
 
 [![Contributed Repos](https://img.shields.io/badge/контрибьютор%20в-25%20проектах-blue)](https://github.com/search?q=author%3Ajohnnyshut+-user%3Ajohnnyshut&type=pullrequests)
 
 | Репозиторий | Описание | ⭐ | Язык |
-|-------------|----------|----|------|
+| ----------- | -------- | -- | ---- |
 | [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | 1C: Platform Tools расширение для Visual Studio Co... | 137 | TypeScript |
 | [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 39 | JavaScript |
 | [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 399 | Java |
@@ -63,7 +74,6 @@
 | [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
 | [1C-Migration-Lab/1c-analyzer-wiki-rag](https://github.com/1C-Migration-Lab/1c-analyzer-wiki-rag) | Открытый проект по анализу конфигураций 1С, постро... | 39 | 1C Enterprise |
 | [1c-syntax/ssl_3_1_edt](https://github.com/1c-syntax/ssl_3_1_edt) | Без описания | 6 | 1C Enterprise |
-
 
 <!-- CONTRIBUTED_REPOS_END -->
 

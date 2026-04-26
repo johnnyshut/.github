@@ -19,20 +19,26 @@
     <td><a href="https://about.gitlab.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" width="32" height="32" /></a></td>
     <td><a href="https://code.visualstudio.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="32" height="32" /></a></td>
     <td><a href="https://www.jenkins.io"><img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="Jenkins" width="32" height="32" /></a></td>
+    <td><a href="https://www.docker.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="32" height="32" /></a></td>
+    <td><a href="https://kubernetes.io/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" width="32" height="32" /></a></td>
   </tr>
   <tr>
-    <td><a href="https://www.docker.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="32" height="32" /></a></td>
     <td><a href="https://www.gnu.org/software/bash/"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/bash-color.svg" alt="Bash" width="32" height="32" /></a></td>
     <td><a href="https://v8.1c.ru"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/logo1c.png" alt="1C" width="32" height="32" /></a></td>
+    <td><a href="https://edt.1c.ru/"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/edt1c.png" alt="1C:EDT" width="32" height="32" /></a></td>
     <td><a href="https://oscript.io/"><img src="https://raw.githubusercontent.com/johnnyshut/.github/main/profile/assets/onescript-blue.svg" alt="OneScript" width="32" height="32" /></a></td>
     <td><a href="https://www.python.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="32" height="32" /></a></td>
+    <td><a href="https://javascript.ru"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="32" height="32" /></a></td>
+    <td><a href="https://www.typescriptlang.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="32" height="32" /></a></td>
   </tr>
   <tr>
-    <td><a href="https://javascript.ru"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="32" height="32" /></a></td>
     <td><a href="https://www.java.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="32" height="32" /></a></td>
     <td><a href="https://dotnet.microsoft.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET" width="32" height="32" /></a></td>
+    <td><a href="https://www.postgresql.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="32" height="32" /></a></td>
+    <td><a href="https://www.microsoft.com/sql-server"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="Microsoft SQL Server" width="32" height="32" /></a></td>
     <td><a href="https://prometheus.io/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" alt="Prometheus" width="32" height="32" /></a></td>
     <td><a href="https://grafana.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" alt="Grafana" width="32" height="32" /></a></td>
+    <td><a href="https://www.sonarsource.com/products/sonarqube/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg" alt="SonarQube" width="32" height="32" /></a></td>
   </tr>
 </table>
 

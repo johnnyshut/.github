@@ -55,30 +55,30 @@
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
-| [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | 1C: Platform Tools расширение для Visual Studio Co... | 148 | TypeScript |
+| [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | 1C: Platform Tools расширение для Visual Studio Co... | 154 | TypeScript |
 | [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 52 | JavaScript |
-| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 405 | Java |
-| [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 59 | Java |
+| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 425 | Java |
+| [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 61 | Java |
 | [firstBitMarksistskaya/jenkins-lib](https://github.com/firstBitMarksistskaya/jenkins-lib) | Jenkins shared library для 1С:Предприятие 8 | 205 | Groovy |
-| [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 249 | 1C Enterprise |
-| [yellow-hammer/prometheus-e1c](https://github.com/yellow-hammer/prometheus-e1c) | Расширение 1С:Предприятие 8 для экспорта метрик в ... | 12 | 1C Enterprise |
+| [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 254 | 1C Enterprise |
+| [yellow-hammer/prometheus-e1c](https://github.com/yellow-hammer/prometheus-e1c) | Расширение 1С:Предприятие 8 для экспорта метрик в ... | 15 | 1C Enterprise |
 | [infina15/oproxy](https://github.com/infina15/oproxy) | TCP прокси-сервер хранилища конфигураций 1С | 73 | 1C Enterprise |
-| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 244 | TypeScript |
-| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 1026 | 1C Enterprise |
-| [EvilBeaver/OneScript](https://github.com/EvilBeaver/OneScript) | Исполняющая среда скриптов на языке 1С | 553 | C# |
-| [yellow-hammer/mcp-1c-platform-tools](https://github.com/yellow-hammer/mcp-1c-platform-tools) | MCP-сервер расширения 1C: Platform Tools для агент... | 17 | TypeScript |
-| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 107 | 1C Enterprise |
+| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 248 | TypeScript |
+| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 1045 | 1C Enterprise |
+| [EvilBeaver/OneScript](https://github.com/EvilBeaver/OneScript) | Исполняющая среда скриптов на языке 1С | 560 | C# |
+| [yellow-hammer/mcp-1c-platform-tools](https://github.com/yellow-hammer/mcp-1c-platform-tools) | MCP-сервер расширения 1C: Platform Tools для агент... | 21 | TypeScript |
+| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 109 | 1C Enterprise |
 | [autumn-library/autumn-library.github.io](https://github.com/autumn-library/autumn-library.github.io) | Без описания | 6 | TypeScript |
 | [Nivanchenko/bootstrapper](https://github.com/Nivanchenko/bootstrapper) | Многофункциональный набор инструментов для 1С разр... | 102 | CSS |
-| [oscript-library/opm](https://github.com/oscript-library/opm) | Пакетный менеджер OneScript | 79 | 1C Enterprise |
-| [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 133 | 1C Enterprise |
+| [oscript-library/opm](https://github.com/oscript-library/opm) | Пакетный менеджер OneScript | 80 | 1C Enterprise |
+| [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 134 | 1C Enterprise |
 | [astrizhachuk/1c-extension-pack](https://github.com/astrizhachuk/1c-extension-pack) | A collection of extensions for 1C (BSL) Developmen... | 3 | N/A |
-| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11595 | CSS |
-| [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 329 | TypeScript |
-| [oscript-library/v8runner](https://github.com/oscript-library/v8runner) | Управление запуском 1С из командной строки | 120 | 1C Enterprise |
-| [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 368 | 1C Enterprise |
+| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11661 | CSS |
+| [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 347 | TypeScript |
+| [oscript-library/v8runner](https://github.com/oscript-library/v8runner) | Управление запуском 1С из командной строки | 123 | 1C Enterprise |
+| [vanessa-opensource/add](https://github.com/vanessa-opensource/add) | Разработка с управляемым качеством на 1С | 372 | 1C Enterprise |
 | [yellow-hammer/prometheus](https://github.com/yellow-hammer/prometheus) | Клиент Prometheus для OneScript: счётчики, индикат... | 8 | 1C Enterprise |
-| [yellow-hammer/vanessa-bootstrap](https://github.com/yellow-hammer/vanessa-bootstrap) | Шаблон правильной разработки на платформе 1С: Пред... | 14 | 1C Enterprise |
+| [yellow-hammer/vanessa-bootstrap](https://github.com/yellow-hammer/vanessa-bootstrap) | Шаблон правильной разработки на платформе 1С: Пред... | 15 | 1C Enterprise |
 | [1C-CPM/VA-Tests-UH32](https://github.com/1C-CPM/VA-Tests-UH32) | Сценарные тесты для конфигурации 1С:Управление Хол... | 9 | Gherkin |
 
 

@@ -55,31 +55,31 @@
 
 | Репозиторий | Описание | ⭐ | Язык |
 |-------------|----------|----|------|
-| [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | 1C: Platform Tools расширение для Visual Studio Co... | 194 | TypeScript |
-| [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 60 | JavaScript |
-| [yellow-hammer/md-sparrow](https://github.com/yellow-hammer/md-sparrow) | Разбор метаданных конфигураций, расширений и т.д. ... | 17 | Java |
-| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 474 | Java |
-| [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 264 | 1C Enterprise |
-| [yellow-hammer/mcp-1c-platform-tools](https://github.com/yellow-hammer/mcp-1c-platform-tools) | MCP-сервер расширения 1C: Platform Tools для агент... | 36 | TypeScript |
+| [yellow-hammer/vscode-1c-platform-tools](https://github.com/yellow-hammer/vscode-1c-platform-tools) | Расширение Visual Studio Code (Cursor, Windsurf, V... | 213 | TypeScript |
+| [yellow-hammer/md-sparrow](https://github.com/yellow-hammer/md-sparrow) | Чтение и запись метаданных 1С:Предприятие 8 в форм... | 21 | Java |
+| [yellow-hammer/dev-rules](https://github.com/yellow-hammer/dev-rules) | Обыкновенные стандарты разработки на платформе 1С:... | 61 | JavaScript |
+| [yellow-hammer/mcp-1c-platform-tools](https://github.com/yellow-hammer/mcp-1c-platform-tools) | MCP-сервер расширения 1C: Platform Tools для AI-аг... | 38 | TypeScript |
+| [1c-syntax/bsl-language-server](https://github.com/1c-syntax/bsl-language-server) | Реализация Language Server Protocol для языка 1C (... | 486 | Java |
+| [vanessa-opensource/vanessa-runner](https://github.com/vanessa-opensource/vanessa-runner) | утилита автоматизации базовых операций разработчик... | 271 | 1C Enterprise |
 | [yellow-hammer/onec-debug-adapter](https://github.com/yellow-hammer/onec-debug-adapter) | Debug Adapter Protocol client implementation for 1... | 12 | C# |
 | [1c-syntax/mdclasses](https://github.com/1c-syntax/mdclasses) | Разбор метаданных конфигураций, расширений и т.д. ... | 67 | Java |
 | [firstBitMarksistskaya/jenkins-lib](https://github.com/firstBitMarksistskaya/jenkins-lib) | Jenkins shared library для 1С:Предприятие 8 | 212 | Groovy |
 | [yellow-hammer/prometheus-e1c](https://github.com/yellow-hammer/prometheus-e1c) | Расширение 1С:Предприятие 8 для экспорта метрик в ... | 21 | 1C Enterprise |
-| [yellow-hammer/oneflag](https://github.com/yellow-hammer/oneflag) | Self-hosted сервис фича-флагов: дашборд, REST API,... | 8 | 1C Enterprise |
-| [infina15/oproxy](https://github.com/infina15/oproxy) | TCP прокси-сервер хранилища конфигураций 1С | 74 | 1C Enterprise |
-| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 259 | TypeScript |
+| [yellow-hammer/namespace-forest](https://github.com/yellow-hammer/namespace-forest) | Схемы форматов исходников 1С:Предприятие 8: XSD вы... | 14 | 1C Enterprise |
+| [yellow-hammer/oneflag](https://github.com/yellow-hammer/oneflag) | Self-hosted сервис фича-флагов: дашборд, REST API,... | 9 | 1C Enterprise |
+| [infina15/oproxy](https://github.com/infina15/oproxy) | TCP прокси-сервер хранилища конфигураций 1С | 76 | 1C Enterprise |
+| [yellow-hammer/prometheus](https://github.com/yellow-hammer/prometheus) | Клиент Prometheus для OneScript: счётчики, индикат... | 11 | 1C Enterprise |
+| [yellow-hammer/vscode-1c-platform-extension-pack](https://github.com/yellow-hammer/vscode-1c-platform-extension-pack) | Набор расширений Visual Studio Code (Cursor, Winds... | 25 | N/A |
+| [zerobig/vscode-1c-metadata-viewer](https://github.com/zerobig/vscode-1c-metadata-viewer) | Вывод дерева метаданных конфигурации 1С и открытие... | 262 | TypeScript |
+| [akpaevj/onec-debug-adapter](https://github.com/akpaevj/onec-debug-adapter) | Без описания | 89 | C# |
 | [autumn-library/autumn-library.github.io](https://github.com/autumn-library/autumn-library.github.io) | Без описания | 6 | TypeScript |
-| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 1106 | 1C Enterprise |
-| [EvilBeaver/OneScript](https://github.com/EvilBeaver/OneScript) | Исполняющая среда скриптов на языке 1С | 576 | C# |
+| [cpr1c/tools_ui_1c](https://github.com/cpr1c/tools_ui_1c) | Универсальные инструменты 1С для управляемых форм | 1124 | 1C Enterprise |
+| [EvilBeaver/OneScript](https://github.com/EvilBeaver/OneScript) | Исполняющая среда скриптов на языке 1С | 585 | C# |
 | [oscript-library/opm](https://github.com/oscript-library/opm) | Пакетный менеджер OneScript | 85 | 1C Enterprise |
-| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 114 | 1C Enterprise |
-| [akpaevj/onec-debug-adapter](https://github.com/akpaevj/onec-debug-adapter) | Без описания | 87 | C# |
+| [zerobig/swagger-1c](https://github.com/zerobig/swagger-1c) | Документация HTTP сервисов в 1С при помощи swagger | 117 | 1C Enterprise |
 | [Nivanchenko/bootstrapper](https://github.com/Nivanchenko/bootstrapper) | Многофункциональный набор инструментов для 1С разр... | 105 | CSS |
-| [yellow-hammer/namespace-forest](https://github.com/yellow-hammer/namespace-forest) | Коллекция XSD-схем для системы 1С:Предприятие 8 | 12 | 1C Enterprise |
-| [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 139 | 1C Enterprise |
-| [astrizhachuk/1c-extension-pack](https://github.com/astrizhachuk/1c-extension-pack) | A collection of extensions for 1C (BSL) Developmen... | 3 | N/A |
-| [devicons/devicon](https://github.com/devicons/devicon) | Set of icons representing programming languages, d... | 11798 | CSS |
-| [EclipseFdn/open-vsx.org](https://github.com/EclipseFdn/open-vsx.org) | Source of open-vsx.org | 391 | TypeScript |
+| [yellow-hammer/samples-1c-platform](https://github.com/yellow-hammer/samples-1c-platform) | Примеры для разработки: выгрузка конфигурации (cf)... | 9 | 1C Enterprise |
+| [1c-syntax/1c-syntax](https://github.com/1c-syntax/1c-syntax) | Syntax definition rules for 1C:Enterprise 8 in Tex... | 142 | 1C Enterprise |
 
 
 <!-- CONTRIBUTED_REPOS_END -->
